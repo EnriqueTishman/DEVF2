@@ -11,14 +11,27 @@ const songs = [
     {id: 4, name: 'Gasolina', artist: 'Daddy Yankee', year: 2002}
 ];
 
-//URl - endpoint
-app.get('/', (req, res) =>{
-    res.json(songs)
-
+// / = Regresar un saludo en html
+app.  get('/', (req, res) =>{
+    res.send('Hola morros !');
 });
 
+// /songs = lista de conciones 
 
+//URl - endpoint
+
+
+app.get('/songs', (req, res) =>{
+    res.json(songs)
+});
+
+// npm i nodemon -D = 
 
 app.listen(port, () => {
     console.log('Servidor de express esta corriendo', port);
 });
+
+
+
+// npmi nodemon -g   +    nodemon (nombre del archivo) 
+// control+c para deterner el servidor 
